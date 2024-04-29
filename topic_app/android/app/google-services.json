@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658752597981",
+    "project_id": "the-topic-app",
+    "storage_bucket": "the-topic-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658752597981:android:35db7784e42d1ce953d034",
+        "android_client_info": {
+          "package_name": "com.example.topic_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL3zjmE5nytjzjrghHa5Q3WfaBAxZ8X_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
