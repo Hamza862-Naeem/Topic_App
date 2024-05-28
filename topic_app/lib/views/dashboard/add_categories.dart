@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../repository/main_repository.dart';
 
 
-
+final categoryRepositoryProvider = Provider.autoDispose<CategoryRepository>((ref) => CategoryRepository());
 class AddCategory extends ConsumerWidget {
   const AddCategory({Key? key}) : super(key: key);
 

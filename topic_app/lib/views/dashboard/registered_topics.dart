@@ -28,7 +28,7 @@ class RegisteredTopics extends ConsumerStatefulWidget {
 
   @override
   RegisteredTopicsState createState() => RegisteredTopicsState();
-  // Implement the updateDrawerImage function
+  
   void updateDrawerImage(File image) {
   }
 }

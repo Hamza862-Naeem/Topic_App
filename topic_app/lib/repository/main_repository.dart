@@ -6,34 +6,29 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import '../model/request/topics.dart';
 
-final categoryRepositoryProvider = Provider<CategoryRepository>((ref) => CategoryRepository());
+
+
 class CategoryRepository {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
+  String id = FirebaseFirestore.instance.collection('Add Category').doc().id;
   Future<void> saveCategory(String title, String imageUrl) async {
     try {
-      final user = FirebaseAuth.instance.currentUser;
-      if (user == null) {
-        throw Exception("User not authenticated");
-      }
-
-      // Create a document for the category in Firestore under the "topics" collection
-      await _firestore.collection('topics').doc('category').set({
+      // Use add() method without specifying document ID to let Firestore generate it
+      await _firestore.collection('Add Category').add({
         'title': title,
         'imageUrl': imageUrl,
-        'userId': user.uid,
+        'id':id,
         // Add any other relevant fields
       });
 
-      // Category added successfully
       print('Category added successfully');
     } catch (e) {
-      // Error occurred while adding category
       print('Error occurred while adding category: $e');
+      throw e;
     }
   }
-
 }
+
 
 
 

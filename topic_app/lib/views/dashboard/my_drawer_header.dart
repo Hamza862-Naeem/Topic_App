@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:topic_app/repository/main_repository.dart';
-
 import '../../app_constants/color_constants.dart';
 import 'add_categories.dart';
+
+
+
 
 class MyDrawerHeader extends ConsumerStatefulWidget {
   final void Function(File) updateDrawerImage;
@@ -27,7 +29,7 @@ class _MyDrawerHeaderState extends ConsumerState<MyDrawerHeader> {
     return Column(
       children: [
         Container(
-          color: AppColors().greenColor,
+          color: AppColors().secondaryColor,
           width: double.infinity,
           height: 200,
           child: Column(
